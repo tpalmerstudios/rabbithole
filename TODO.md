@@ -1,20 +1,20 @@
 # Project To-Do List (Master Overview)
 
 1. **Environment & System Setup**
-   -~~ Install Fedora + Sway environment.~~
-   -~~ Install development tools (gcc/clang, make/CMake, git, terminal tools).~~
-   -~~ Configure Git globally (name, email, editor).~~
-   -~~ Generate SSH keys and confirm GitHub authentication works.~~
+   - ~~ Install Fedora + Sway environment.~~
+   - ~~ Install development tools (gcc/clang, make/CMake, git, terminal tools).~~
+   - ~~ Configure Git globally (name, email, editor).~~
+   - ~~ Generate SSH keys and confirm GitHub authentication works.~~
    - Set up ClangFormat + integrate it into Vim.
    - Set up a Git pre-commit hook for formatting + reminder to update documentation.
    - Install optional documentation tools (Doxygen).
    - ~~Install your Sway utilities (notification daemon, Waybar, network management, etc.).~~
 
 2. **Repository Setup & Project Management**
-   -~~ Create the project GitHub repo.~~
+   - ~~ Create the project GitHub repo.~~
    - Add README + description + goals + scope.
    - Create a roadmap/milestones document.
-   -~~ Add your initial to-do list to the repo.~~
+   - ~~ Add your initial to-do list to the repo.~~
    - Enable issue tracking and labels for tasks.
    - Set up branching strategy:
      - main for stable releases
