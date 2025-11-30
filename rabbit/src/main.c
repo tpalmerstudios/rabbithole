@@ -1,13 +1,34 @@
+/**
+ * @file main.c
+ * @brief This is the beginning stage of the Rabbit frontend for the database
+ */
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-typdef struct {
+/**
+ * @sruct Item
+ * @brief This is the sample structure we'll be using for now
+ */
+typedef struct
+{
 	char name[50];
 	int value;
 } Item;
-
+/**
+ * @define MAX_ITEMS 100
+ * @brief Limit to 100 while developing
+ */
 #define MAX_ITEMS 100
+/**
+ * @param items
+ * @brief An array of Item structures
+ */
 Item items[MAX_ITEMS];
+/**
+ * @param itemCount
+ * @brief Track current number of items
+ */
 int itemCount = 0;
 
 int showMenu ();
@@ -19,26 +40,26 @@ int main ()
 	showMenu ();
 	int choice;
 	while (1)
-	{
-		printf ("Enter your choice: ");
-		scanf ("%d", &choice);
-		getchar ();
-
-		switch (choice)
 		{
-			case 1:
-				addItem ();
-				break;
-			case 2:
-				viewItems ();
-				break;
-			case 3:
-				printf ("Exiting...\n");
-				return 0;
-			default:
-				printf ("Invalid choice. Please try again.\n");
+			printf ("Enter your choice: ");
+			scanf ("%d", &choice);
+			getchar ();
+
+			switch (choice)
+				{
+				case 1:
+					addItem ();
+					break;
+				case 2:
+					viewItems ();
+					break;
+				case 3:
+					printf ("Exiting...\n");
+					return 0;
+				default:
+					printf ("Invalid choice. Please try again.\n");
+				}
 		}
-	}
 	return 0;
 }
 
@@ -55,17 +76,17 @@ int showMenu ()
 int addItem ()
 {
 	if (itemCount >= MAX_ITEMS)
-	{
-		return -1;
-	}
+		{
+			return -1;
+		}
 
 	Item newItem;
 	printf ("Enter item name: ");
 	fgets (newItem.name, sizeof (newItem.name), stdin);
-	newItem.name [strcspn (newItem.name, "\n")] = '\0';
+	newItem.name[strcspn (newItem.name, "\n")] = '\0';
 
 	printf ("Enter item value (integer): ");
-	scanf ("%d",&newItem.value);
+	scanf ("%d", &newItem.value);
 	getchar ();
 
 	items[itemCount++] = newItem;
@@ -76,16 +97,16 @@ int addItem ()
 int viewItems ()
 {
 	if (itemCount == 0)
-	{
-		printf ("No items to display.\n");
-		return -1;
-	}
+		{
+			printf ("No items to display.\n");
+			return -1;
+		}
 
 	printf ("\nItem List\n");
-	for (int i = 0;i < itemCount; i++)
-	{
-		printf ("Item %d: Name: %s, Value: %d\n", i + 1, items [i].name, items [i].value);
-	}
+	for (int i = 0; i < itemCount; i++)
+		{
+			printf ("Item %d: Name: %s, Value: %d\n", i + 1, items[i].name,
+					items[i].value);
+		}
 	return 0;
 }
-
