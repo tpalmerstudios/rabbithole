@@ -75,7 +75,7 @@ Makefile
 coverage/
 test-results/
 
-docs/html/
-docs/latex/
+docs/
+docs/
 
 .clangd/
