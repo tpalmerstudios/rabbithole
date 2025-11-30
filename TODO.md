@@ -2,14 +2,14 @@
 
 1. **Environment & System Setup**
    - ~~Set up ClangFormat + integrate it into Vim.~~
-      - Add ClanfFormat to CMake target
+      - Add ClangFormat to CMake target
    - Set up a Git pre-commit hook for formatting + reminder to update documentation.
    - Install documentation tools (Doxygen).
    - Create a basic CMake build with a hello world
       - Have one program run as a daemon that waits for a call and just returns the string "hello world"
       - The calling program should call and recieve the string
 2. **Repository Setup & Project Management**
-   - Add README + description + goals + scope.
+   - Add ~~README + description~~ + goals + scope.
    - Create a roadmap/milestones document.
    - Enable issue tracking and labels for tasks.
    - Set up branching strategy:
