@@ -41,6 +41,17 @@
 *.su
 *.idb
 *.pdb
+vgcore.*
+*.core
+*.gdb
+
+# Logs
+*.log
+
+# Temporary & Auto Generated
+*.tmp
+*.swp
+*.swo
 
 # Kernel Module Compile Results
 *.mod*
@@ -53,3 +64,18 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+.clang-format.in
+
+coverage/
+test-results/
+
+docs/html/
+docs/latex/
+
+.clangd/
