@@ -1,12 +1,7 @@
 # Project To-Do List (Master Overview)
 
 1. **Environment & System Setup**
-   - ~~Set up ClangFormat + integrate it into Vim.~~
-      - Add ClangFormat to CMake target
    - Set up a Git pre-commit hook for formatting + reminder to update documentation.
-   - ~~Install documentation tools (Doxygen).~~
-   - Create a basic CMake build with a hello world
-   - Create a complex hello world with multiple files and headers
    - Structure the hello world as th final project will be structured
       - Have one program run as a daemon that waits for a call and just returns the string "hello world"
       - The calling program should call and recieve the string

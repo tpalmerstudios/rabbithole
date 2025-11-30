@@ -86,19 +86,13 @@ target_compile_options(rabbit PRIVATE -Wall -Wextra -Werror)
 
 # clang-format target
 # Esures proper formatting of all code
-file(GLOB_RECURSE ALL_C_SOURCES
-	"${CMAKE_SOURCE_DIR}rabbit/src/*.c"
-	"${CMAKE_SOURCE_DIR}rabbit/include/*.h"
-	"${CMAKE_SOURCE_DIR}hole/src/*.c"
-	"${CMAKE_SOURCE_DIR}hole/include/*.h"
-)
 
 find_program(CLANG_FORMAT_EXE NAMES clang-format)
 
-if(CLANG_FORMAT_EXE)
+if(CLANG_FORMAT_EXE AND ALL_C_FILES)
 	add_custom_target(
 		clang-format
-		COMMAND ${CLANG_FORMAT_EXE} -i ${ALL_C_SOURCES}
+		COMMAND ${CLANG_FORMAT_EXE} -i ${ALL_C_FILES}
 		WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
 		COMMENT "Running clang-format on source files"
 	)
